@@ -1,0 +1,48 @@
+$date
+	Sat Mar  4 16:42:13 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top_tb $end
+$var reg 3 ) d_out [2:0] $end
+$enddefinitions $end
+
+#0
+bx )
+#5
+b0 )
+#10
+#15
+#20
+#25
+#30
+#35
+b1 )
+#40
+#45
+b10 )
+#50
+#55
+b100 )
+#60
+#65
+b10 )
+#70
+#75
+b100 )
+#80
+#85
+b1 )
+#90
+#95
+b10 )
+#100
+#105
+b100 )
+#110
+#115
+b1 )

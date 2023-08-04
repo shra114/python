@@ -24,8 +24,9 @@ def synth(frequency, duration=1, sampling_rate=44100):
     #frames = int(duration*sampling_rate)
     frames = int(duration*sampling_rate)
     linspace_arry  = np.linspace(0,duration, frames)
-    w = np.pi*frequency
+    w = 2*np.pi*frequency
     #arr  = np.cos(2*np.pi*frequency*np.linspace(0,duration, frames))
+    #https://www.youtube.com/watch?v=ogFAHvYatWs&t=254s
     arr   = 0.6*np.sin(1*w*linspace_arry) * np.exp(-0.0015*w*linspace_arry)
     arr  += 0.4*np.sin(2*w*linspace_arry) * np.exp(-0.0015*w*linspace_arry)
     #plt.plot(arr[:300])
@@ -62,7 +63,7 @@ screen = pg.display.set_mode((XMAX, YMAX))
 draw_lines(screen)
 counter = 0
 clock = pg.time.Clock()
-SPS = 100 #samples per second
+SPS = 10 #samples per second
 
 running = True
 while running:

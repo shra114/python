@@ -1,0 +1,9 @@
+Tutorial pygame in 90min
+https://www.youtube.com/watch?v=jO6qQDNa2UY
+
+Music synthesizer
+https://www.youtube.com/watch?v=SSyQ0kRHzis&t=1445s
+
+
+Making music with maths
+https://www.youtube.com/watch?v=ogFAHvYatWs&t=254s

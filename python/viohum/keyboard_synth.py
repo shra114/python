@@ -4,7 +4,7 @@ import numpy as np
 
 def synth(frequency, duration=1, sampling_rate=44100):
     #frames = int(duration*sampling_rate)
-    frames = int(duration*sampling_rate/2)
+    frames = int(duration*sampling_rate)
     arr = np.cos(2*np.pi*frequency*np.linspace(0,duration, frames))
     arr = arr + np.cos(4*np.pi*frequency*np.linspace(0,duration, frames))
     arr = arr - np.cos(6*np.pi*frequency*np.linspace(0,duration, frames))
@@ -22,13 +22,12 @@ def draw_lines(screen):
         xstart = int(XMAX* (i/NUMNOTES))
         pg.draw.line(screen, WHITE, (xstart, 0), (xstart, YMAX))
         #Draw rectangle for the odd sections
-        if(i==10):
+        if(i%2):
             print (xstart)
-            #pg.draw.rect(screen, BLUE, pg.Rect(xstart, 0 , xstart+int(XMAX/NUMNOTES), YMAX))
-            #pg.draw.rect(screen, BLUE, pg.Rect(xstart, 0 , xstart+10,10))
+            #The top-left vertex of the rectangle has coordinates (40, 80)
+            #the width of the rectangle is 50 and the height is 30 pixels
+            pg.draw.rect(screen, BLUE, pg.Rect(xstart, 0 , XMAX/NUMNOTES, YMAX))
             #pg.display.update()
-            None
-
     return None
 
 running = 1
